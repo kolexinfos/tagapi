@@ -21,7 +21,9 @@ app.use(passport.initialize());
 // Bring in defined Passport Strategy
 require('./config/passport')(passport);
 
-var users = require('./app/users');
+var users = require('./app/routes/users');
+//var home = require('./app/routes/routes');
+var messages = require('./app/routes/messages');
 
 
 // Use body-parser to get POST requests for API use
@@ -42,7 +44,9 @@ mongoose.connect(config.database);
 
 //require('./app/routes')(app);
 
-app.use('/api',requireAuth, users);
+//app.use('/api', requireAuth,home)(app);
+app.use('/users', users);
+app.use('/messages',requireAuth, messages);
 
 // Start the server
 app.listen(port);
