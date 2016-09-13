@@ -49,5 +49,7 @@ app.use('/users', users);
 app.use('/messages',requireAuth, messages);
 
 // Start the server
-app.listen(port);
-console.log('Your server is running on port ' + port + '.');
+//app.listen(port);
+//console.log('Your server is running on port ' + port + '.');
+
+module.exports = app;

@@ -2,7 +2,7 @@
   "name": "saas",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "bcrypt": "^0.8.5",
