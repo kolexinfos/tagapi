@@ -1,6 +1,6 @@
 {
   "name": "saas",
-  "main": "server.js",
+  "main": "./bin/wwww",
   "scripts": {
     "dev": "nodemon ./bin/www"
   },
