@@ -22,7 +22,7 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 var users = require('./app/routes/users');
-//var home = require('./app/routes/routes');
+var routes = require('./app/routes/routes');
 var messages = require('./app/routes/messages');
 
 
@@ -47,6 +47,7 @@ mongoose.connect(config.database);
 //app.use('/api', requireAuth,home)(app);
 app.use('/users', users);
 app.use('/messages',requireAuth, messages);
+app.use('/routes', requireAuth, routes);
 
 // Start the server
 //app.listen(port);

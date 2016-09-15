@@ -18,6 +18,8 @@ const UserSchema = new mongoose.Schema({
     enum: ['Client', 'Manager', 'Admin'],
     default: 'Client'
   }
+},{
+  timestamps: true // Saves createdAt and updatedAt as dates. createdAt will be our timestamp.
 });
 
 // Saves the user's password hashed (plain text password storage is not good)
